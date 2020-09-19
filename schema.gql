@@ -1,0 +1,13 @@
+type Article {
+  title: String!
+  star: Int!
+  rocket: Int!
+  heart: Int!
+}
+
+type Query {
+  allArticles: [Article!]
+  incRxn(artID: String!, rxnType: String!): Article! @resolver(name: "incRxn")
+  decRxn(artID: String!, rxnType: String!): Article! @resolver(name: "decRxn")
+  articleIdByTitle(title: String!): Article!
+}
