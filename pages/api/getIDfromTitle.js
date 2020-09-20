@@ -12,10 +12,10 @@ export default async (req, res) => {
   }
   `;
 
-  const answer = await fetch("https://graphql.fauna.com/graphql", {
+  const answer = await fetch(process.env.FAUNA_ENDPOINT, {
     method: "POST",
     headers: {
-      Authorization: `Bearer fnAD2HijSAACAexA7Rw7V3kNBoX2fFi6E1tlkx_T`,
+      Authorization: `Bearer ${process.env.FAUNA_TOKEN}`,
       "Content-type": "application/json",
       Accept: "application/json",
     },
