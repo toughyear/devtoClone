@@ -4,7 +4,7 @@ import { AiOutlineUser } from "react-icons/ai";
 
 export default function Navbar() {
   return (
-    <div className="flex justify-between text-xl py-4 px-48  sticky top-0 bg-white bg-opacity-75">
+    <div className="flex justify-between text-xl py-4 px-48 z-10  sticky top-0 bg-white bg-opacity-75">
       <div className="flex w-1/2">
         <Link href="/">
           <button className="bg-black text-white text-xl font-bold px-4 py-2 rounded-md mr-6">
